@@ -1,4 +1,5 @@
 import angular from 'angular';
+import moment from 'moment';
 
 import template from './need.tpl.js';
 
@@ -8,6 +9,7 @@ class NeedController{
 
   /* @ngInject */
   constructor(){
+    this.moment = moment;
   }
 }
 
