@@ -5,6 +5,7 @@ import 'angular-ui-router';
 import menuComponent from '../menu/menu.component.js';
 import homeComponent from '../home/home.component.js';
 import needsComponent from '../needs/needs.component.js';
+import aboutComponent from '../about/about.component.js';
 import appConfig from 'common/app.config.js';
 
 import template from './main.tpl.js';
@@ -37,6 +38,10 @@ function routingConfig($stateProvider, $locationProvider, $urlRouterProvider){
     .state('needs', {
       url: "/needs/:category",
       template: '<needs></needs>'
+    })
+    .state('about', {
+      url: "/about",
+      template: '<about></about>'
     });
 
   $locationProvider.html5Mode(true);
@@ -50,7 +55,8 @@ export default angular
     'ui.router',
     menuComponent.name,
     homeComponent.name,
-    needsComponent.name
+    needsComponent.name,
+    aboutComponent.name
   ])
   .config(routingConfig)
   .component(componentName, {
