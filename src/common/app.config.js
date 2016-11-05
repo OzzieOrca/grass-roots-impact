@@ -20,5 +20,5 @@ function appConfig($httpProvider) {
 
 export default angular.module('appConfig', [
 
-])
+  ])
   .config(appConfig);

@@ -12,12 +12,7 @@ SystemJS.config({
   nodeConfig: {
     "paths": {
       "npm:": "jspm_packages/npm/",
-      "github:": "jspm_packages/github/",
-      "app/*": "src/app/*",
-      "common/*": "src/common/*",
-      "assets/*": "dist/assets/*",
-      "lib/*": "lib/*",
-      "jspm_packages/*": "jspm_packages/*"
+      "github:": "jspm_packages/github/"
     }
   },
   devConfig: {

@@ -30,8 +30,12 @@ function routingConfig($stateProvider, $locationProvider, $urlRouterProvider){
       url: "/categories",
       template: '<home-categories></home-categories>'
     })
+    .state('create-need', {
+      url: "/needs/create",
+      template: '<create-need></create-need>'
+    })
     .state('needs', {
-      url: "/needs",
+      url: "/needs/:category",
       template: '<needs></needs>'
     });
 

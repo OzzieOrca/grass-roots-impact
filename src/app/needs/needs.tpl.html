@@ -1,9 +1,28 @@
 <div class="container">
   <div class="row">
-    <div clas="col-xs-12">
-      <h2>Needs</h2>
+    <div class="col-sm-3">
+      <h4>Filters</h4>
+      <div class="panel panel-default">
+        <div class="panel-heading">Categories</div>
+        <div class="list-group">
+          <a class="list-group-item" ui-sref="needs({ category: '' })" ui-sref-active="active">All</a>
+          <a class="list-group-item" ui-sref="needs({ category: 'Goods' })" ui-sref-active="active">Goods</a>
+          <a class="list-group-item" ui-sref="needs({ category: 'Housing' })" ui-sref-active="active">Housing</a>
+          <a class="list-group-item" ui-sref="needs({ category: 'Services' })" ui-sref-active="active">Services</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-9">
+      <h3 class="text-center">
+        Your Opportunities
+        <small>Provide {{$ctrl.category}}</small>
+      </h3>
 
       <need ng-repeat="need in $ctrl.needs" need="need"></need>
+
+      <div class="alert alert-warning" role="alert" ng-if="$ctrl.needs.length === 0">
+        <p>We could not find any needs that match your filters.</p>
+      </div>
     </div>
   </div>
 </div>

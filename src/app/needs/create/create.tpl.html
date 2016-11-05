@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <h2>Ask for a helping hand</h2>
+
+          <form ng-submit="$ctrl.save()">
+            <div class="form-group">
+              <label>
+                I need...
+                <input type="text" class="form-control" ng-model="$ctrl.name">
+              </label>
+            </div>
+            <div class="form-group">
+              <label>
+                Because...
+                <textarea class="form-control" ng-model="$ctrl.description"></textarea>
+              </label>
+            </div>
+            <div class="form-group">
+              <label>
+                Category
+                <input type="text" class="form-control" ng-model="$ctrl.category">
+              </label>
+            </div>
+            <div class="form-group">
+              <label>
+                Location
+                <input type="text" class="form-control" ng-model="$ctrl.location">
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,11 +1,15 @@
 <div class="panel panel-default">
   <div class="panel-body">
-    <h3>{{$ctrl.need.name}}</h3>
+    <h3>
+      {{$ctrl.need.name}}
+      <small>
+        &middot;
+        Username &middot;
+        {{$ctrl.need.created}} &middot;
+        {{$ctrl.need.location}}
+      </small>
+    </h3>
     <p>{{$ctrl.need.description}}</p>
-    <p>Posted: {{$ctrl.need.created}}</p>
-    <p>Deadline: {{$ctrl.need.deadline}}</p>
-    <p>Location: {{$ctrl.need.location}}</p>
-    <p>Category: {{$ctrl.need.category}}</p>
     <p>Sub category: {{$ctrl.need.subCategory}}</p>
   </div>
 </div>
