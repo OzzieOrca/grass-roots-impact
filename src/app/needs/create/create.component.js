@@ -8,8 +8,9 @@ let componentName = 'createNeed';
 class CreateNeedsController{
 
   /* @ngInject */
-  constructor($window, $firebaseArray){
+  constructor($window, $firebaseArray, $state){
     this.$window = $window;
+    this.$state = $state;
     this.$firebaseArray = $firebaseArray;
   }
 
@@ -26,6 +27,7 @@ class CreateNeedsController{
       })
       .then(() => {
         console.log('saved');
+        this.$state.go('needs');
       });
   }
 }
