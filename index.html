@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" data-framework="angularjs">
+  <head>
+      <meta charset=" utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+      <meta name="viewport" content="width = device-width, minimal-ui, initial-scale = 1, user-scalable = no" />
+      <meta name="apple-mobile-web-app-title" content="Demo App">
+      <title>Grass Roots Impact</title>
+      <base href="/">
+      <!-- @if ENV='dev' -->
+      <link rel="stylesheet" href="dist/main.css" type="text/css">
+      <!-- @endif -->
+
+      <!-- @if ENV='prod' !>
+      <link rel="stylesheet" href="main.min.css" type="text/css">
+      <!-- @endif -->
+  </head>
+  <body ng-cloak ng-app="main">
+
+    <noscript>
+      <div class="deprecation-warning">
+        <h1>Please enable Javascript</h1>
+        <p>This site requires your browser to have Javascript enabled.
+        <a href="http://enable-javascript.com" target="_blank">Learn more</a></p>
+      </div>
+    </noscript>
+
+    <main></main>
+
+    <!-- @if ENV='dev' -->
+    <script src="jspm_packages/system.js"></script>
+    <script src="jspm.config.js"></script>
+    <!-- @endif -->
+
+    <!-- @if ENV='prod' !>
+    <script src="main.js?bust={{date}}"></script>
+    <!-- @endif -->
+
+    <script>
+      System.import('app/main/main.component.js')
+        .catch(function(error) {
+          console.error('SystemJS import error:', error);
+        });
+    </script>
+  </body>
+</html>
