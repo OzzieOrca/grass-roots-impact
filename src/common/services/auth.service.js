@@ -16,7 +16,6 @@ class Auth {
     this.auth.$onAuthStateChanged(firebaseUser => {
       if (firebaseUser) {
         this.currentUser = firebaseUser;
-        console.log(this.currentUser);
         let userRef = this.$firebaseObject(this.$window.firebase.database().ref().child('users').child(this.currentUser.uid));
         userRef.displayName = this.currentUser.displayName;
         userRef.email = this.currentUser.email;

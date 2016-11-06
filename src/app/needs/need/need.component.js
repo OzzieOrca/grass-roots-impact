@@ -8,8 +8,14 @@ let componentName = 'need';
 class NeedController{
 
   /* @ngInject */
-  constructor(){
+  constructor($window, $firebaseObject){
+    this.$window = $window;
+    this.$firebaseObject = $firebaseObject;
     this.moment = moment;
+  }
+
+  $onInit(){
+    this.user = this.$firebaseObject(this.$window.firebase.database().ref('users').child(this.need.userId));
   }
 }
 

@@ -29,7 +29,6 @@ class CreateNeedsController{
         created: firebase.database.ServerValue.TIMESTAMP
       })
       .then(() => {
-        console.log('saved');
         this.$state.go('needs');
       });
   }
