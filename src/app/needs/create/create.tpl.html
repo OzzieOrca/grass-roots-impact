@@ -8,61 +8,67 @@
       <div class="col-xs-12">
         <div class="panel panel-default">
           <div class="panel-body">
-              <div class="col-sm-5">
-                <form ng-submit="$ctrl.save()" class="create-need">
-                  <div class="form-group">
-                    <label>
-                      I need...
-                      <input type="text" class="form-control" ng-model="$ctrl.name">
-                    </label>
-                  </div>
-                  <div class="form-group">
-                    <label>
-                      Because...
-                      <textarea class="form-control" ng-model="$ctrl.description"></textarea>
-                    </label>
-                  </div>
-                  <div class="form-group">
-                    <label>
-                      Category
-                      <select class="form-control" ng-model="$ctrl.category">
-                        <option value="Goods">Goods</option>
-                        <option value="Housing">Housing</option>
-                        <option value="Services">Services</option>
-                      </select>
-                    </label>
-                  </div>
-                  <div class="form-group">
-                    <label>
-                      Location
-                      <select class="form-control" ng-model="$ctrl.location">
-                        <option value="Sacramento">Sacramento</option>
-                      </select>
-                    </label>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-              </div>
-              <div class="col-sm-6 col-sm-offset-1">
-<h2>What can I ask for?</h2>
+            <div class="col-sm-5">
+              <form ng-submit="$ctrl.save()" class="create-need">
+                <div class="form-group">
+                  <label>
+                    I need...
+                    <input type="text" class="form-control" ng-model="$ctrl.name">
+                  </label>
+                </div>
+                <div class="form-group">
+                  <label>
+                    Because...
+                    <textarea class="form-control" ng-model="$ctrl.description"></textarea>
+                  </label>
+                </div>
+                <div class="form-group">
+                  <label>
+                    Category
+                    <select class="form-control" ng-model="$ctrl.category">
+                      <option value="Goods">Goods</option>
+                      <option value="Housing">Housing</option>
+                      <option value="Services">Services</option>
+                    </select>
+                  </label>
+                </div>
+                <div class="form-group">
+                  <label>
+                    Location
+                    <select class="form-control" ng-model="$ctrl.location">
+                      <option value="Sacramento">Sacramento</option>
+                    </select>
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+            <div class="col-sm-6 col-sm-offset-1">
+              <h2>What can I ask for?</h2>
 
-                <p>
-                  <strong>Goods:</strong>
-                  What do you need? Food, clothing, emergency supplies, etc.
-                </p>
-                <p>
-                  <strong>Housing:</strong>
-                  Do you need a place to stay? You can ask for short-term housing (less than 1 month), long term (less than 1 year), or permanent (roomate wanted).
-                </p>
-                <p>
-                  <strong>Services:</strong>
-                  What can we do for you? Job search assistance, tasks/chores, counseling services, transportation, volunteers, etc.
-                </p>
-              </div>
+              <p>
+                <strong>Goods:</strong>
+                What do you need?
+                <br>
+                Food, clothing, emergency supplies, etc.
+              </p>
+              <p>
+                <strong>Housing:</strong>
+                Do you need a place to stay?
+                <br>
+                You can ask for short-term housing (less than 1 month), long term (less than 1 year), or permanent (roomate wanted).
+              </p>
+              <p>
+                <strong>Services:</strong>
+                What can we do for you?
+                <br>
+                Job search assistance, tasks/chores, counseling services, transportation, volunteers, etc.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 </div>
