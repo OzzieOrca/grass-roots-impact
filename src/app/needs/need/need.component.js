@@ -1,6 +1,8 @@
 import angular from 'angular';
 import moment from 'moment';
 
+import needDetailsComponent from './need-details/need-details.component.js';
+
 import template from './need.tpl.js';
 
 let componentName = 'need';
@@ -21,7 +23,8 @@ class NeedController{
 
 export default angular
   .module(componentName, [
-    template.name
+    template.name,
+    needDetailsComponent.name
   ])
   .component(componentName, {
     controller: NeedController,

@@ -41,6 +41,10 @@ function routingConfig($stateProvider, $locationProvider, $urlRouterProvider){
       url: "/needs/:category",
       template: '<needs></needs>'
     })
+    .state('need', {
+      url: "/need/:id",
+      template: '<need-details></need-details>'
+    })
     .state('about', {
       url: "/about",
       template: '<about></about>'
