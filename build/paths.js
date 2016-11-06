@@ -4,7 +4,7 @@ module.exports = {
   html: ['src/**/*.html', 'index.html'],
   json: 'src/**/*.json',
   templates: 'src/**/*.html',
-  scss: ['src/app/**/*.scss', 'src/common/**/*.scss'],
+  scss: ['src/app/**/*.scss', 'src/common/**/*.scss', '!src/app/main/main.scss'],
   scssWatch: ['src/**/*.scss'],
   srcDir: 'src/',
   output: 'dist/',

@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')({
-  pattern: ['gulp-*', 'run-sequence', 'browser-sync']
+  pattern: ['gulp-*', 'run-sequence', 'browser-sync', 'merge-stream']
 });
 
 var paths = require('../paths');
@@ -31,7 +31,7 @@ gulp.task('html', function () {
 });
 
 gulp.task('scss', function () {
-  return gulp.src(paths.scss)
+  return $.mergeStream(gulp.src('src/app/main/main.scss'), gulp.src(paths.scss))
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
     .pipe($.systemjsResolver({systemConfig: './jspm.config.js'}))
