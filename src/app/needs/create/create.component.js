@@ -28,8 +28,8 @@ class CreateNeedsController{
         userId: this.auth.currentUser.uid,
         created: firebase.database.ServerValue.TIMESTAMP
       })
-      .then(() => {
-        this.$state.go('needs');
+      .then(ref => {
+        this.$state.go('need', { id: ref.getKey(), justCreated: true });
       });
   }
 }

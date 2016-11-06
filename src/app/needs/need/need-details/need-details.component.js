@@ -13,6 +13,7 @@ class NeedDetailsController{
     this.$firebaseObject = $firebaseObject;
     this.moment = moment;
     this.needId = $stateParams.id;
+    this.justCreated = $stateParams.justCreated;
   }
 
   $onInit(){

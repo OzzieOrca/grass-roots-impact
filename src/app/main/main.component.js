@@ -42,7 +42,7 @@ function routingConfig($stateProvider, $locationProvider, $urlRouterProvider){
       template: '<needs></needs>'
     })
     .state('need', {
-      url: "/need/:id",
+      url: "/need/:id?justCreated",
       template: '<need-details></need-details>'
     })
     .state('about', {

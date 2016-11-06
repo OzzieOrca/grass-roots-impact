@@ -1,14 +1,34 @@
-<div class="panel panel-default">
-  <div class="panel-body">
-    <h3><span>I need...</span>
-      {{$ctrl.need.name}}
-      <small>
-        &middot;
-        {{$ctrl.user.displayName}} &middot;
-        {{$ctrl.moment($ctrl.need.created).format('MMM Do')}} &middot;
-        {{$ctrl.need.location}}
-      </small>
-    </h3>
-    <p><span>Because...</span>{{$ctrl.need.description}}</p>
+<div class="interior-hero hero text-center" ng-if="$ctrl.justCreated">
+  <h2>Thank you!</h2>
+  <p>You can view your posting below</p>
+  <h3>You will be notified when someone responds to your need.</h3>
+  <button class="btn btn-lg btn-primary" ui-sref="needs">Can you lend a hand?</button>
+</div>
+
+<div class="interior-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <button class="btn btn-lg btn-primary" ui-sref="needs">Back to needs</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <h3><span>I need...</span>
+              {{$ctrl.need.name}}
+              <small>
+                &middot;
+                {{$ctrl.user.displayName}} &middot;
+                {{$ctrl.moment($ctrl.need.created).format('MMM Do')}} &middot;
+                {{$ctrl.need.location}}
+              </small>
+            </h3>
+            <p><span>Because...</span>{{$ctrl.need.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
