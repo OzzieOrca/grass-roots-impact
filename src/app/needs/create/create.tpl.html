@@ -1,43 +1,49 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <div class="panel panel-default">
-        <div class="panel-body">
-          <h2>Ask for a helping hand</h2>
+<div class="interior-hero hero">
+  <h2>Ask for a<br />Helping Hand</h2>
+</div>
 
-          <form ng-submit="$ctrl.save()">
-            <div class="form-group">
-              <label>
-                I need...
-                <input type="text" class="form-control" ng-model="$ctrl.name">
-              </label>
-            </div>
-            <div class="form-group">
-              <label>
-                Because...
-                <textarea class="form-control" ng-model="$ctrl.description"></textarea>
-              </label>
-            </div>
-            <div class="form-group">
-              <label>
-                Category
-                <select class="form-control" ng-model="$ctrl.category">
-                  <option value="Goods">Goods</option>
-                  <option value="Housing">Housing</option>
-                  <option value="Services">Services</option>
-                </select>
-              </label>
-            </div>
-            <div class="form-group">
-              <label>
-                Location
-                <select class="form-control" ng-model="$ctrl.location">
-                  <option value="Sacramento">Sacramento</option>
-                </select>
-              </label>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
+<div class="interior-content">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <h2>Ask for a helping hand</h2>
+
+            <form ng-submit="$ctrl.save()">
+              <div class="form-group">
+                <label>
+                  I need...
+                  <input type="text" class="form-control" ng-model="$ctrl.name">
+                </label>
+              </div>
+              <div class="form-group">
+                <label>
+                  Because...
+                  <textarea class="form-control" ng-model="$ctrl.description"></textarea>
+                </label>
+              </div>
+              <div class="form-group">
+                <label>
+                  Category
+                  <select class="form-control" ng-model="$ctrl.category">
+                    <option value="Goods">Goods</option>
+                    <option value="Housing">Housing</option>
+                    <option value="Services">Services</option>
+                  </select>
+                </label>
+              </div>
+              <div class="form-group">
+                <label>
+                  Location
+                  <select class="form-control" ng-model="$ctrl.location">
+                    <option value="Sacramento">Sacramento</option>
+                  </select>
+                </label>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
