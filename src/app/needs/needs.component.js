@@ -2,6 +2,7 @@ import angular from 'angular';
 import 'angularfire';
 
 import needComponent from './need/need.component.js';
+import needDetailsComponent from './need-details/need-details.component.js';
 import createComponent from './create/create.component.js';
 
 import template from './needs.tpl.js';
@@ -14,7 +15,6 @@ class NeedsController{
   constructor($window, $stateParams, $firebaseArray){
     let ref = $window.firebase.database().ref().child("needs");
     this.category = $stateParams.category;
-    console.log(this.category);
     if(this.category){
       ref = ref.orderByChild('category').startAt(this.category).endAt(this.category);
     }
@@ -27,6 +27,7 @@ export default angular
     template.name,
     'firebase',
     needComponent.name,
+    needDetailsComponent.name,
     createComponent.name
   ])
   .component(componentName, {

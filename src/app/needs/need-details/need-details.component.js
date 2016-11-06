@@ -18,9 +18,9 @@ class NeedDetailsController{
 
   $onInit(){
     this.need = this.$firebaseObject(this.$window.firebase.database().ref('needs').child(this.needId));
-    this.need.$loaded().then(() => {
-      this.user = this.$firebaseObject(this.$window.firebase.database().ref('users').child(this.need.userId));
-    });
+    //this.need.$loaded().then(() => {
+    //  this.user = this.$firebaseObject(this.$window.firebase.database().ref('users').child(this.need.userId));
+    //});
   }
 }
 
