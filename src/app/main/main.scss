@@ -115,3 +115,10 @@ need-details need > .panel:hover {
   cursor: default;
   background-color: transparent;
 }
+
+form.create-need {
+  input, label {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
