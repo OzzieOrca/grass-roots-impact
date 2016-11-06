@@ -5,6 +5,11 @@ body{
   //padding-top: 70px;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .navbar-brand {
   text-transform: uppercase;
   padding-top: 0;
@@ -85,5 +90,16 @@ need {
   h3 {margin-top: 0;}
   p:first-letter {
     text-transform: capitalize;
+  }
+  .user-profile {
+    img {
+      max-width: 100px;
+      float: right;
+      margin-left: 14px;
+      margin-bottom: 14px;
+    }
+    .heading {
+      text-transform: none;
+    }
   }
 }

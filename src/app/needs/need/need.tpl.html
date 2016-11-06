@@ -1,21 +1,20 @@
 <div class="panel panel-default" ui-sref="need({id: $ctrl.need.$id})">
   <div class="panel-body">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-4">
         <span class="heading">I need...</span>
         <h3>
           {{$ctrl.need.name}}
-          <!--<small>
-            &middot;
-            {{$ctrl.user.displayName}} &middot;
-            {{$ctrl.moment($ctrl.need.created).format('MMM Do')}} &middot;
-            {{$ctrl.need.location}}
-          </small>-->
         </h3>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-4">
         <span class="heading">Because...</span>
         <p>{{$ctrl.need.description}}</p>
+      </div>
+      <div class="col-md-4 user-profile">
+        <img ng-src="{{$ctrl.user.photoURL}}" />
+        <span class="heading">{{$ctrl.user.displayName}}</span>
+        <p>Submitted: {{$ctrl.moment($ctrl.need.created).format('MMM Do')}}<br />Location: {{$ctrl.need.location}}</p>
       </div>
     </div>
   </div>
