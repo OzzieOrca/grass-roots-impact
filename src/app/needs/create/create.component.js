@@ -1,6 +1,8 @@
 import angular from 'angular';
 import 'angularfire';
 
+import authService from 'common/services/auth.service.js';
+
 import template from './create.tpl.js';
 
 let componentName = 'createNeed';
@@ -8,10 +10,11 @@ let componentName = 'createNeed';
 class CreateNeedsController{
 
   /* @ngInject */
-  constructor($window, $firebaseArray, $state){
+  constructor($window, $firebaseArray, $state, auth){
     this.$window = $window;
     this.$state = $state;
     this.$firebaseArray = $firebaseArray;
+    this.auth = auth;
   }
 
   save(){
@@ -22,7 +25,7 @@ class CreateNeedsController{
         description: this.description,
         location: this.location,
         name: this.name,
-        userId: 0,
+        userId: this.auth.currentUser.uid,
         created: firebase.database.ServerValue.TIMESTAMP
       })
       .then(() => {
@@ -35,7 +38,8 @@ class CreateNeedsController{
 export default angular
   .module(componentName, [
     template.name,
-    'firebase'
+    'firebase',
+    authService.name
   ])
   .component(componentName, {
     controller: CreateNeedsController,

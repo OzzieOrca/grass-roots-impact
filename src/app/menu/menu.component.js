@@ -1,6 +1,8 @@
 import angular from 'angular';
 import 'angularfire';
 
+import authService from 'common/services/auth.service.js';
+
 import template from './menu.tpl.js';
 
 let componentName = 'menu';
@@ -8,34 +10,16 @@ let componentName = 'menu';
 class MenuController{
 
   /* @ngInject */
-  constructor($firebaseAuth){
-    this.auth = $firebaseAuth();
-    this.watchAuthState();
-  }
-
-  watchAuthState(){
-    this.auth.$onAuthStateChanged(firebaseUser => {
-      if (firebaseUser) {
-        this.currentUser = firebaseUser;
-      } else {
-        this.currentUser = null;
-      }
-    });
-  }
-
-  signIn(){
-    this.auth.$signInWithPopup("google");
-  }
-
-  signOut(){
-    this.auth.$signOut();
+  constructor(auth){
+    this.auth = auth;
   }
 }
 
 export default angular
   .module(componentName, [
     template.name,
-    'firebase'
+    'firebase',
+    authService.name
   ])
   .component(componentName, {
     controller: MenuController,

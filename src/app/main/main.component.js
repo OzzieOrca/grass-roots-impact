@@ -18,7 +18,6 @@ class MainController{
   constructor($scope){
     $scope.$on("$stateChangeStart", (event, toState) => {
       this.currentRouteName = toState.name;
-      console.log(toState.name)
     });
   }
 }
