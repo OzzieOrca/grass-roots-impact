@@ -15,6 +15,16 @@ class NeedController{
   }
 
   $onInit(){
+    if(typeof this.need.$loaded === 'function'){
+      this.need.$loaded().then(() => {
+        this.loadUser();
+      });
+    }else{
+      this.loadUser();
+    }
+  }
+
+  loadUser(){
     this.user = this.$firebaseObject(this.$window.firebase.database().ref('users').child(this.need.userId));
   }
 }
