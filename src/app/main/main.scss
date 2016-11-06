@@ -101,4 +101,17 @@ need {
       text-transform: none;
     }
   }
+  > .panel {
+      -webkit-transition: background-color .2s;
+      transition: background-color .2s;
+      &:hover {
+        cursor: pointer;
+        background-color: $gray-lighter;
+      }
+  }
+}
+
+need-details need > .panel:hover {
+  cursor: default;
+  background-color: transparent;
 }

@@ -1,20 +1,28 @@
-<div class="interior-hero hero text-center" ng-if="$ctrl.justCreated">
-  <h2>Thank you!</h2>
-  <p>You can view your posting below</p>
-  <h3>You will be notified when someone responds to your need.</h3>
-  <button class="btn btn-lg btn-primary" ui-sref="needs">Can you lend a hand?</button>
+<div class="interior-hero hero text-center">
+  <div ng-if="$ctrl.justCreated">
+    <h2>Thank you!</h2>
+    <p>You can view your posting below</p>
+    <h3>You will be notified when someone responds to your need.</h3>
+    <button class="btn btn-lg btn-primary" ui-sref="needs">Can you lend a hand?</button>
+  </div>
+  <div ng-if="!$ctrl.justCreated">
+    <h2>Need Details</h2>
+  </div>
 </div>
 
 <div class="interior-content">
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <button class="btn btn-lg btn-primary" ui-sref="needs">Back to needs</button>
+        <need need="$ctrl.need"></need>
       </div>
     </div>
-    <div class="row">
-      <div class="col-xs-12">
-        <need need="$ctrl.need"></need>
+    <div class="row button-row">
+      <div class="col-xs-6">
+        <button class="btn btn-lg btn-primary" ui-sref="needs">Back to needs</button>
+      </div>
+      <div class="col-xs-6 text-right">
+        <button class="btn btn-lg btn-primary" href="#">Contact Me!</button>
       </div>
     </div>
   </div>
