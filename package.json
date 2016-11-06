@@ -18,6 +18,7 @@
     "gulp-clean-css": "^2.0.12",
     "gulp-concat": "^2.6.0",
     "gulp-css-url-adjuster": "^0.2.3",
+    "gulp-debug": "^2.1.2",
     "gulp-eslint": "^3.0.1",
     "gulp-insert": "^0.5.0",
     "gulp-jspm-build": "0.0.15",

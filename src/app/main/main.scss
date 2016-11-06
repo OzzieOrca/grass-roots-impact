@@ -5,4 +5,37 @@ body{
   padding-top: 70px;
 }
 
-.navbar-brand {text-transform: uppercase;}
+.navbar-brand {
+  text-transform: uppercase;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 50px;
+  img {
+    height: 50px;
+    width: auto;
+  }
+}
+
+ui-view {
+  display: block;
+  &.interior-content {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+need {
+  h3 {
+    span {
+      display: block;
+      margin-bottom: 8px;
+      font-size: .7em;
+      color: $gray-light;
+    }
+  }
+}
+
+footer {
+  background-color: $gray-darker;
+  color: #fff;
+}
