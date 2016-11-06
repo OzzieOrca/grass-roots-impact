@@ -2,7 +2,7 @@
 @import "~BlackrockDigital/startbootstrap-agency/scss/agency.scss";
 
 body{
-  padding-top: 70px;
+  //padding-top: 70px;
 }
 
 .navbar-brand {
@@ -16,26 +16,74 @@ body{
   }
 }
 
-ui-view {
-  display: block;
-  &.interior-content {
-    padding-top: 50px;
-    padding-bottom: 50px;
+.hero {
+  background-image: url(/src/app/home/images/hands-image.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  h2 {
+    color: #fff;
+    font-size: 48px;
+    margin-bottom: 36px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
   }
 }
 
-need {
-  h3 {
-    span {
-      display: block;
-      margin-bottom: 8px;
-      font-size: .7em;
-      color: $gray-light;
-    }
-  }
+.interior-page {
+  padding-top: 70px;
+}
+
+.interior-content {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+ui-view {
+  display: block;
+  /* &.interior-content {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  } */
 }
 
 footer {
   background-color: $gray-darker;
   color: #fff;
+}
+
+
+// NEEDS
+
+needs {
+  .btn-group {
+    .btn[disabled] {
+      background-color: $gray-darker;
+      color: #fff;
+      opacity: 1;
+      cursor: default;
+      border-color: $gray-darker;
+    }
+  }
+  .filter-buttons {margin-bottom: 24px;}
+}
+
+need {
+  span.heading {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+    color: $gray-light;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  h3 {margin-top: 0;}
+  p:first-letter {
+    text-transform: capitalize;
+  }
 }

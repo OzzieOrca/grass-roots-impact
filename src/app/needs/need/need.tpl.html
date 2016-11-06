@@ -1,14 +1,22 @@
 <div class="panel panel-default" ui-sref="need({id: $ctrl.need.$id})">
   <div class="panel-body">
-    <h3><span>I need...</span>
-      {{$ctrl.need.name}}
-      <small>
-        &middot;
-        {{$ctrl.user.displayName}} &middot;
-        {{$ctrl.moment($ctrl.need.created).format('MMM Do')}} &middot;
-        {{$ctrl.need.location}}
-      </small>
-    </h3>
-    <p><span>Because...</span>{{$ctrl.need.description}}</p>
+    <div class="row">
+      <div class="col-md-6">
+        <span class="heading">I need...</span>
+        <h3>
+          {{$ctrl.need.name}}
+          <!--<small>
+            &middot;
+            {{$ctrl.user.displayName}} &middot;
+            {{$ctrl.moment($ctrl.need.created).format('MMM Do')}} &middot;
+            {{$ctrl.need.location}}
+          </small>-->
+        </h3>
+      </div>
+      <div class="col-md-6">
+        <span class="heading">Because...</span>
+        <p>{{$ctrl.need.description}}</p>
+      </div>
+    </div>
   </div>
 </div>

@@ -1,36 +1,50 @@
-<div class="container">
-  <div class="row">
-    <div class="col-sm-3">
-      <h4>Filters</h4>
-      <div class="panel panel-default">
-        <div class="panel-heading">Categories</div>
-        <div class="list-group">
-          <a class="list-group-item" ui-sref="needs({ category: '' })" ui-sref-active="active">All</a>
-          <a class="list-group-item" ui-sref="needs({ category: 'Goods' })" ui-sref-active="active">Goods</a>
-          <a class="list-group-item" ui-sref="needs({ category: 'Housing' })" ui-sref-active="active">Housing</a>
-          <a class="list-group-item" ui-sref="needs({ category: 'Services' })" ui-sref-active="active">Services</a>
+<div class="interior-hero hero">
+  <h2>Your opportunities</h2>
+</div>
+
+<div class="interior-content">
+  <div class="container">
+    <div class="row filter-buttons">
+      <div class="col-sm-8">
+        <div class="btn-group btn-group-lg" role="group" aria-label="Filters">
+          <button type="button" class="btn btn-default" disabled>Filters</button>
+          <button type="button" class="btn btn-default" ui-sref="needs({ category: '' })" ui-sref-active="active">All</button>
+          <button type="button" class="btn btn-default" ui-sref="needs({ category: 'Goods' })" ui-sref-active="active">Goods</button>
+          <button type="button" class="btn btn-default" ui-sref="needs({ category: 'Housing' })" ui-sref-active="active">Housing</button>
+          <button type="button" class="btn btn-default" ui-sref="needs({ category: 'Services' })" ui-sref-active="active">Services</button>
         </div>
+      </div>
+      <div class="col-sm-4 text-right">
+        <button class="btn btn-primary btn-lg" ui-sref="create-need">I need a helping hand</button>
       </div>
     </div>
-    <div class="col-sm-9">
-      <div class="row">
-        <div class="col-sm-8">
-          <h3>
-            Your Opportunities
-            <small ng-if="$ctrl.category">Provide {{$ctrl.category}}</small>
-          </h3>
+    <div class="row">
+      <!-- <div class="col-sm-3">
+        <h4>Filters</h4>
+        <div class="panel panel-default">
+          <div class="panel-heading">Categories</div>
+          <div class="list-group">
+            <a class="list-group-item" ui-sref="needs({ category: '' })" ui-sref-active="active">All</a>
+            <a class="list-group-item" ui-sref="needs({ category: 'Goods' })" ui-sref-active="active">Goods</a>
+            <a class="list-group-item" ui-sref="needs({ category: 'Housing' })" ui-sref-active="active">Housing</a>
+            <a class="list-group-item" ui-sref="needs({ category: 'Services' })" ui-sref-active="active">Services</a>
+          </div>
         </div>
-        <div class="col-sm-4 text-right">
-          <button class="btn btn-primary" ui-sref="create-need">
-            I need a helping hand
-          </button>
+      </div> -->
+      <div class="col-sm-12">
+        <!-- <div class="row">
+          <div class="col-sm-4 col-sm-offset-8 text-right">
+            <button class="btn btn-primary" ui-sref="create-need">
+              I need a helping hand
+            </button>
+          </div>
+        </div> -->
+
+        <need ng-repeat="need in $ctrl.needs" need="need"></need>
+
+        <div class="alert alert-warning" role="alert" ng-if="$ctrl.needs.length === 0">
+          <p>We could not find any needs that match your filters.</p>
         </div>
-      </div>
-
-      <need ng-repeat="need in $ctrl.needs" need="need"></need>
-
-      <div class="alert alert-warning" role="alert" ng-if="$ctrl.needs.length === 0">
-        <p>We could not find any needs that match your filters.</p>
       </div>
     </div>
   </div>
