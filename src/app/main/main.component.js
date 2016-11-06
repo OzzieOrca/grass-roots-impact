@@ -15,8 +15,11 @@ let componentName = 'main';
 class MainController{
 
   /* @ngInject */
-  constructor(){
-
+  constructor($scope){
+    $scope.$on("$stateChangeStart", (event, toState) => {
+      this.currentRouteName = toState.name;
+      console.log(toState.name)
+    });
   }
 }
 
